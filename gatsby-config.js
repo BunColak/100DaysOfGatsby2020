@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: "AudioC0re",
@@ -6,8 +8,8 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "5lmgzmN5Oyl1eJh9b41hwcgWgPYGx54b0X6t0AuQVys",
-        spaceId: "",
+        accessToken: process.env.CONTENTFUL_API_KEY,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
     "gatsby-plugin-postcss",
